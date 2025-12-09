@@ -4,38 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <title>Weather Application</title>
   </head>
   <body>
-    <header>
-      <h1>where to?</h1>
-      <h2>The Digital Nomads' Weather App</h2>
-      <h3>Not sure where to travel next? Compare locations here!</h3>
-    </header>
-    <main>
-      <div class="locationA">
-        <input type="search" placeholder="Location A" required></input>
-        <input type="submit" value="Search"></input>
-        <p>London 12°C</p><br/>
-        <p>Monday 11:49am <span>Scattered clouds</span></p> 
-      </div>
-      <div class="locationB">
-        <input type="search" placeholder="Location B" ></input>
-        <input type="submit" value="Search"></input>
-        <p>Paris 13°C</p><br/>
-        <p>Monday 12:49pm <span>Scattered clouds</span></p> 
-      </div>
-    </main>
-    <footer>
-      This project was coded by Ellie Trew, is open-sourced on
-      <a href="https://elliesweatherapp.netlify.app/" target="blank">Netlify</a>
-      and
-      <a
-        href="https://github.com/ellietrew-collab/ellies-weather-app"
-        target="blank"
-      >
-        hosted on GitHub!</a
-      >
-    </footer>
+    <div class="container">
+        <header>
+        <h1>where to?</h1>
+        <h2>THE DIGITAL NOMADS' WEATHER APP</h2>
+        <h3>Not sure where to travel next? Compare locations here!</h3>
+        </header>
+        <main>
+        <div class="locationA">
+            <input type="search" placeholder="Location A" required></input>
+            <input type="submit" value="Search"></input>
+            <p>London <span class="highlightedElement">12°C</span></p><br/>
+            <p>Monday <span class="highlightedElement">11:49am</span><span class="skyStatus">Scattered clouds</span></p> 
+        </div>
+        <div class="locationB">
+            <input type="search" placeholder="Location B" ></input>
+            <input type="submit" value="Search"></input>
+            <p>Paris 13°C</p><br/>
+            <p>Monday 12:49pm <span>Scattered clouds</span></p> 
+        </div>
+        </main>
+        <footer>
+        This project was coded by Ellie Trew, is open-sourced on
+        <a href="https://elliesweatherapp.netlify.app/" target="blank">Netlify</a>
+        and
+        <a
+            href="https://github.com/ellietrew-collab/ellies-weather-app"
+            target="blank"
+        >
+            hosted on GitHub!</a
+        >
+        </footer>      
+    </div>
   </body>
 </html>
