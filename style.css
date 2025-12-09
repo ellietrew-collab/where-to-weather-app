@@ -1,6 +1,5 @@
 body {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/cork-board.png");
-  background-repeat: repeat;
+  background-color: rgb(255, 216, 155);
 }
 
 .container {
@@ -11,18 +10,53 @@ body {
   border-radius: 10px;
 }
 
-.locationA {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  margin: 20px;
+main,
+footer,
+h3 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.locationA p {
+.heading {
+  display: flex;
+  gap: 10px;
+}
+
+.heading img {
+  height: 90px;
+  width: 90px;
+}
+
+.locations {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(55, 55, 55, 0.1);
+  margin: 20px 0;
+}
+
+.location-card {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin: 5px;
+  flex: 1;
+}
+
+.location-card p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 12px;
+}
+
+strong {
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 h1 {
@@ -44,14 +78,16 @@ h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 12px 0;
+  text-align: center;
 }
 
 h3 {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  text-align: center;
   margin: 8px 0 0 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(55, 55, 55);
 }
 
 .titan-one-regular {
@@ -60,16 +96,52 @@ h3 {
   font-style: normal;
 }
 
+.location-card input {
+  width: 60%;
+  max-width: 300px;
+}
+
+input {
+  font-size: medium;
+  background-color: rgba(255, 253, 247, 0.9);
+  padding: 5px;
+  border-radius: 10px;
+  border: 1.5px solid rgb(23, 36, 164);
+  justify-content: space-between;
+  align-items: center;
+}
+
+input.button {
+  margin-left: 10px;
+  align-items: end;
+  cursor: pointer;
+  background-color: rgb(23, 36, 164);
+  color: rgba(255, 253, 247, 0.9);
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
 .highlightedElement {
   font-weight: bolder;
   color: rgb(23, 36, 164);
 }
 
 .skyStatus {
-  text-align: right;
+  text-align: justify;
 }
+
 footer {
-  font-size: 14px;
+  font-size: 13px;
+  text-align: center;
+  color: rgb(55, 55, 55);
   font-weight: 400;
   line-height: 1.6;
+}
+
+a {
+  color: rgb(23, 36, 164);
+  text-decoration: none;
 }
