@@ -1,3 +1,9 @@
+@media (max-width: 700px) {
+  .locations {
+    flex-direction: column;
+  }
+}
+
 body {
   background-color: rgb(255, 216, 155);
 }
@@ -30,6 +36,7 @@ h3 {
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  width: 100%;
 }
 
 hr {
@@ -45,13 +52,14 @@ hr {
   border-radius: 10px;
   margin: 5px;
   flex: 1;
+  min-width: 250px;
 }
 
 .location-card p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  line-height: 2px;
 }
 
 strong {
@@ -101,14 +109,18 @@ h3 {
   max-width: 300px;
 }
 
+.search-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 input {
   font-size: medium;
   background-color: rgba(255, 253, 247, 0.9);
   padding: 5px;
   border-radius: 10px;
   border: 1.5px solid rgb(23, 36, 164);
-  justify-content: space-between;
-  align-items: center;
 }
 
 input.button {
@@ -121,16 +133,35 @@ input.button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  aspect-ratio: 1;
 }
 
-.highlightedElement {
-  font-weight: bolder;
+.localTime {
+  color: rgb(23, 36, 164);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.city-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.localTemperature {
+  font-size: 30px;
+  font-weight: bold;
   color: rgb(23, 36, 164);
 }
 
-.skyStatus {
-  text-align: justify;
+.weatherIcon {
+  padding: 20px;
+  font-size: 36px;
+}
+
+.weatherInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 footer {

@@ -4,48 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <title>Weather Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>🗺️ where to?</title>
   </head>
+
   <body>
     <div class="container">
-        <header>
-            <div class="heading">
-                <h1>where to?</h1>
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/451/original/image-JgVvskF7j2zQ9LmIWmnCHHInmpJcTJ.png?1765275727" alt="location-pin">
-            </div>
-            <h2>THE DIGITAL NOMADS' WEATHER APP</h2>
-            <h3>Not sure where to travel next? Compare locations here!</h3>
-        </header>
-        <hr>
-        <main class="locations">
+      <header>
+        <div class="heading">
+          <h1>where to?</h1>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/451/original/image-JgVvskF7j2zQ9LmIWmnCHHInmpJcTJ.png?1765275727"
+            alt="location-pin"
+          />
+        </div>
+        <h2>THE DIGITAL NOMADS' WEATHER APP</h2>
+        <h3>Not sure where to travel next? Compare locations here!</h3>
+      </header>
+
+      <hr />
+
+      <main class="locations">
         <div class="location-card locationA">
-            <input type="search" placeholder="Location A" required></input>
-            <input class=button type="submit" value="✈️"></input>
-            <p><strong>London </strong><span class="highlightedElement">12°C</span></p>
-            <p></strong>Monday <span class="highlightedElement">11:49am</span><span class="skyStatus">Scattered clouds</span></p> 
+          <div class="search-row">
+            <input type="search" placeholder="Location A" required />
+            <input class="button" type="submit" value="✈️" />
+          </div>
+
+          <div class="city-row">
+            <strong>London</strong>
+            <span class="weatherInfo">
+              <span class="weatherIcon">🌤️</span>
+              <span class="localTemperature">12°C</span>
+            </span>
+          </div>
+
+          <p>
+            Monday
+            <span class="localTime">11:49</span>
+            <span class="skyStatus"><em>Scattered clouds</em></span>
+          </p>
         </div>
+
         <div class="location-card locationB">
-            <input type="search" placeholder="Location B" required></input>
-            <input class=button type="submit" value="✈️"></input>
-            <p><strong>London </strong><span class="highlightedElement">12°C</span></p>
-            <p></strong>Monday <span class="highlightedElement">11:49am</span><span class="skyStatus">Scattered clouds</span></p>  
+          <div class="search-row">
+            <input type="search" placeholder="Location B" required />
+            <input class="button" type="submit" value="✈️" />
+          </div>
+
+          <div class="city-row">
+            <strong>London</strong>
+            <span class="weatherInfo">
+              <span class="weatherIcon">🌤️</span>
+              <span class="localTemperature">12°C</span>
+            </span>
+          </div>
+
+          <p>
+            Monday
+            <span class="localTime">11:49</span>
+            <span class="skyStatus"><em>Scattered clouds</em></span>
+          </p>
         </div>
-        </main>
-        <hr>
-        <footer>
+      </main>
+
+      <hr />
+
+      <footer>
         This project was coded by Ellie Trew, is open-sourced on
-        <a href="https://elliesweatherapp.netlify.app/" target="blank">Netlify</a>
+        <a href="https://elliesweatherapp.netlify.app/" target="blank"
+          >Netlify</a
+        >
         and hosted on
         <a
-            href="https://github.com/ellietrew-collab/ellies-weather-app"
-            target="blank"
+          href="https://github.com/ellietrew-collab/ellies-weather-app"
+          target="blank"
         >
-        GitHub</a
+          GitHub</a
         >!👩🏼‍💻
-        </footer>      
+      </footer>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
