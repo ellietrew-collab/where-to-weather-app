@@ -98,6 +98,10 @@ h3 {
   color: rgb(55, 55, 55);
 }
 
+.note {
+  font-size: 14px;
+}
+
 .titan-one-regular {
   font-family: "Titan One", sans-serif;
   font-weight: 400;

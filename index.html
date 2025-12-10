@@ -25,7 +25,10 @@
           />
         </div>
         <h2>THE DIGITAL NOMADS' WEATHER APP</h2>
-        <h3>Not sure where to travel next? Compare locations here!</h3>
+        <h3>
+          Not sure where to travel next? Compare locations here! <br />
+          <span class="note">(Must be a city🔎)</span>
+        </h3>
       </header>
 
       <hr />
@@ -33,12 +36,17 @@
       <main class="locations">
         <div class="location-card locationA">
           <div class="search-row">
-            <input type="search" placeholder="Location A" required />
+            <input
+              type="search"
+              placeholder="Location A"
+              required
+              id="search-formA"
+            />
             <input class="button" type="submit" value="✈️" />
           </div>
 
           <div class="city-row">
-            <strong>London</strong>
+            <strong id="cityA">London</strong>
             <span class="weatherInfo">
               <span class="weatherIcon">🌤️</span>
               <span class="localTemperature">12°C</span>
@@ -54,12 +62,17 @@
 
         <div class="location-card locationB">
           <div class="search-row">
-            <input type="search" placeholder="Location B" required />
+            <input
+              type="search"
+              placeholder="Location B"
+              required
+              id="search-formB"
+            />
             <input class="button" type="submit" value="✈️" />
           </div>
 
           <div class="city-row">
-            <strong>London</strong>
+            <strong id="cityB">London</strong>
             <span class="weatherInfo">
               <span class="weatherIcon">🌤️</span>
               <span class="localTemperature">12°C</span>
