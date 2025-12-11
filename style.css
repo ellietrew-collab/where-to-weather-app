@@ -56,7 +56,6 @@ hr {
 }
 
 .location-card p {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   line-height: 2px;
@@ -139,12 +138,6 @@ input.button {
   border-radius: 50%;
 }
 
-.localTime {
-  color: rgb(23, 36, 164);
-  font-size: 18px;
-  font-weight: bold;
-}
-
 .city-row {
   display: flex;
   justify-content: space-between;
@@ -158,14 +151,25 @@ input.button {
 }
 
 .weatherIcon {
-  padding: 20px;
-  font-size: 36px;
+  width: 70px;
+  height: 70px;
+  display: flex;
 }
 
 .weatherInfo {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.dashboard,
+.skyStatus {
+  font-size: 17px;
+}
+
+.dashboard {
+  color: rgb(23, 36, 164);
+  font-weight: bolder;
 }
 
 footer {

@@ -27,7 +27,7 @@
         <h2>THE DIGITAL NOMADS' WEATHER APP</h2>
         <h3>
           Not sure where to travel next? Compare locations here! <br />
-          <span class="note">(Must be a city🔎)</span>
+          <span class="note">(Must be a city🔎) & (Forecast section pending👀)</span>
         </h3>
       </header>
 
@@ -46,20 +46,20 @@
           </div>
 
           <div class="city-row">
-            <strong id="cityA">London</strong>
+            <strong id="cityA">City</strong>
             <span class="weatherInfo">
-              <span class="weatherIcon">🌤️</span>
-              <span class="localTemperature">12°C</span>
+              <span class="weatherIcon" id="emojiWeatherA"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="broken-clouds"></span>
+              <span class="localTemperature" id="tempDisplayA">__°C</span>
             </span>
           </div>
 
           <p>
-            Monday
-            <span class="localTime">11:49</span>
-            <span class="skyStatus"><em>Scattered clouds</em></span>
+            <span class="dashboard" id="dashboardA"
+              ><em>Weather Stats</em></span
+            >
+            <div class="skyStatus" id="skyStatusA"><em>Condition</em></div>
           </p>
         </div>
-
         <div class="location-card locationB">
           <div class="search-row">
             <input
@@ -72,17 +72,18 @@
           </div>
 
           <div class="city-row">
-            <strong id="cityB">London</strong>
+            <strong id="cityB">City</strong>
             <span class="weatherInfo">
-              <span class="weatherIcon">🌤️</span>
-              <span class="localTemperature">12°C</span>
+              <span class="weatherIcon" id="emojiWeatherB"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="rain-day"></span>
+              <span class="localTemperature" id="tempDisplayB">__°C</span>
             </span>
           </div>
 
           <p>
-            Monday
-            <span class="localTime">11:49</span>
-            <span class="skyStatus"><em>Scattered clouds</em></span>
+            <span class="dashboard" id="dashboardB"
+              ><em>Weather Stats</em></span
+            >
+            <div class="skyStatus" id="skyStatusB"><em>Condition</em></div>
           </p>
         </div>
       </main>
