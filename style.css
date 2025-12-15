@@ -52,7 +52,7 @@ hr {
   border-radius: 10px;
   margin: 5px;
   flex: 1;
-  min-width: 250px;
+  width: auto;
 }
 
 .location-card p {
@@ -95,6 +95,17 @@ h3 {
   text-align: center;
   margin: 8px 0 0 0;
   color: rgb(55, 55, 55);
+}
+
+h4 {
+  font-family: "Titan One", sans-serif;
+  color: rgb(23, 36, 164);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 8px 0px;
+  padding: 0;
+  text-align: center;
 }
 
 .note {
@@ -170,6 +181,32 @@ input.button {
 .dashboard {
   color: rgb(23, 36, 164);
   font-weight: bolder;
+}
+
+.forecasts {
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.day {
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  flex: 1;
+  width: auto;
+}
+
+.forecastDay {
+  margin: 0px;
+}
+
+.day img {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
 }
 
 footer {
