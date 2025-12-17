@@ -148,5 +148,5 @@ function displayForecastB(response) {
   forecastElementB.innerHTML = forecastHTML;
 }
 
-displayForecastA();
-displayForecastB();
+displayForecastA("London");
+displayForecastB("London");
