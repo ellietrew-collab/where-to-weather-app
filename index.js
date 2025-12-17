@@ -77,3 +77,44 @@ function displayWeatherB(response) {
   let currentDateElement = document.querySelector("#dashboardB");
   currentDateElement.innerHTML = `Feels like ${feelsLike}°C. Wind ${windSpeed} km/h`;
 }
+
+// FORECAST A
+function displayForecastA() {
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="day">
+      <p class="forecastDay">${day}</p>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="weather">
+      <p class="tempDisplay"><span class="higherTemp">15°</span> 8°</p>
+    </div>`;
+  });
+
+  let forecastElementA = document.querySelector("#forecastA");
+  forecastElementA.innerHTML = forecastHTML;
+}
+
+// FORECAST B
+function displayForecastB() {
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="day">
+      <p class="forecastDay">${day}</p>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="weather">
+      <p class="tempDisplay"><span class="higherTemp">15°</span> 8°</p>
+    </div>`;
+  });
+
+  let forecastElementB = document.querySelector("#forecastB");
+  forecastElementB.innerHTML = forecastHTML;
+}
+
+displayForecastA();
+displayForecastB();
