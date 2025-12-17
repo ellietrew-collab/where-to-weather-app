@@ -54,6 +54,7 @@ function handleSearchSubmitB(event) {
   let city = searchInput.value;
   if (city) {
     searchCityB(city);
+    getForecastB(city);
   }
 }
 
@@ -80,6 +81,12 @@ function displayWeatherB(response) {
 }
 
 // FORECAST A
+function formatDayA(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function getForecastA(city) {
   let apiKey = "1f9f285004aef49bt1147a6ab5o3ba7b";
   let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -87,17 +94,20 @@ function getForecastA(city) {
 }
 
 function displayForecastA(response) {
-  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="day">
-      <p class="forecastDay">${day}</p>
-      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="weather">
-      <p class="tempDisplay"><span class="higherTemp">15°</span> 8°</p>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="day">
+      <p class="forecastDay">${formatDayA(day.time)}</p>
+      <img src="${day.condition.icon_url}">
+      <p class="tempDisplay"><span class="higherTemp">${Math.round(
+        day.temperature.maximum
+      )}°</span> ${Math.round(day.temperature.minimum)}°</p>
     </div>`;
+    }
   });
 
   let forecastElementA = document.querySelector("#forecastA");
@@ -105,18 +115,33 @@ function displayForecastA(response) {
 }
 
 // FORECAST B
-function displayForecastB() {
-  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+function formatDayB(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
+function getForecastB(city) {
+  let apiKey = "1f9f285004aef49bt1147a6ab5o3ba7b";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecastB);
+}
+
+function displayForecastB(response) {
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="day">
-      <p class="forecastDay">${day}</p>
-      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="weather">
-      <p class="tempDisplay"><span class="higherTemp">15°</span> 8°</p>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="day">
+      <p class="forecastDay">${formatDayB(day.time)}</p>
+      <img src="${day.condition.icon_url}">
+      <p class="tempDisplay"><span class="higherTemp">${Math.round(
+        day.temperature.maximum
+      )}°</span> ${Math.round(day.temperature.minimum)}°</p>
     </div>`;
+    }
   });
 
   let forecastElementB = document.querySelector("#forecastB");
